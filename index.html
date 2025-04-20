@@ -1,21 +1,21 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stack - Mural</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stack Mural</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script defer src="mural.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/js/all.min.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-gray-900 text-white font-sans flex items-center justify-center min-h-screen overflow-hidden">
-  <div class="relative w-full max-w-md">
-    <div id="carousel" class="space-y-6 text-center"></div>
-    <div class="flex justify-between mt-6">
-      <button onclick="prev()" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded">←</button>
-      <button onclick="next()" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded">→</button>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <div class="text-center">
+    <div class="flex justify-between mb-4">
+      <button onclick="prev()" class="text-2xl px-4">&larr;</button>
+      <button onclick="next()" class="text-2xl px-4">&rarr;</button>
     </div>
+    <div id="carousel"></div>
   </div>
-  <script src="mural.js"></script>
 </body>
 </html>

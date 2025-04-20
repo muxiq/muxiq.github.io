@@ -1,0 +1,22 @@
+{
+  "muxiq": {
+    "nome": "Muxiq",
+    "avatar": "https://avatars.githubusercontent.com/u/000000?v=4",
+    "bio": "Criador do Stack",
+    "tema": "escuro",
+    "links": [
+      "https://github.com/muxiq",
+      "https://twitter.com/muxiq"
+    ]
+  },
+  "joaosilva": {
+    "nome": "Jo\u00e3o Silva",
+    "avatar": "https://placekitten.com/200/200",
+    "bio": "Amigo do Muxiq",
+    "tema": "claro",
+    "links": [
+      "https://instagram.com/joaosilva",
+      "https://linkedin.com/in/joaosilva"
+    ]
+  }
+}

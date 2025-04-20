@@ -45,3 +45,8 @@ function prev() {
   indexAtual = (indexAtual - 1 + perfis.length) % perfis.length;
   mostrarPerfil(indexAtual);
 }
+
+
+setInterval(() => {
+  next();
+}, 3000); // Troca a cada 3 segundos

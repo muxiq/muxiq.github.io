@@ -1,0 +1,35 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+}
+.mural {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+.card:hover {
+  background: #333;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}

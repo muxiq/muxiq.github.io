@@ -1,54 +1,53 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #121212;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  transition: background 0.3s, color 0.3s;
-}
-
-:root {
-  --bg: #ffffff;
-  --text: #000000;
-}
-
-.dark {
-  --bg: #121212;
-  --text: #ffffff;
 }
 
 .container {
-  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   width: 100%;
+  max-width: 1000px;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 16px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  border: 2px solid #444;
 }
 
 .links a {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  background: #eee;
-  border-radius: 8px;
-  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 8px;
+  background: #222;
+  border-radius: 50%;
+  color: #fff;
   text-decoration: none;
+  font-size: 1.4rem;
   transition: background 0.2s;
 }
 
 .links a:hover {
-  background: #ddd;
-}
-
-#toggleTheme {
-  margin-top: 2rem;
-  padding: 8px 16px;
+  background: #444;
 }

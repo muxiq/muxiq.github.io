@@ -1,19 +1,32 @@
-fetch('perfil.json')
+const icons = {
+  Instagram: "fa-brands fa-instagram",
+  YouTube: "fa-brands fa-youtube",
+  Discord: "fa-brands fa-discord",
+  GitHub: "fa-brands fa-github",
+  Site: "fa-solid fa-globe",
+  WhatsApp: "fa-brands fa-whatsapp",
+  Twitter: "fa-brands fa-x-twitter",
+  TikTok: "fa-brands fa-tiktok"
+};
+
+fetch('perfis.json')
   .then(res => res.json())
   .then(data => {
-    document.getElementById('avatar').src = data.avatar;
-    document.getElementById('name').textContent = data.name;
-    document.getElementById('bio').textContent = data.bio;
-    const linksDiv = document.getElementById('links');
-    data.links.forEach(link => {
-      const a = document.createElement('a');
-      a.href = link.url;
-      a.textContent = link.name;
-      a.target = "_blank";
-      linksDiv.appendChild(a);
+    const container = document.getElementById('profiles');
+    data.forEach(user => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = \`
+        <img class="avatar" src="\${user.avatar}" alt="Avatar" />
+        <h2>\${user.name}</h2>
+        <p>\${user.bio}</p>
+        <div class="links">
+          \${user.links.map(link => {
+            const icon = icons[link.name] || "fa-solid fa-link";
+            return \`<a href="\${link.url}" target="_blank"><i class="\${icon}"></i></a>\`;
+          }).join('')}
+        </div>
+      \`;
+      container.appendChild(card);
     });
   });
-
-document.getElementById('toggleTheme').onclick = () => {
-  document.body.classList.toggle('dark');
-}
